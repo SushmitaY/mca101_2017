@@ -13,24 +13,23 @@ def merge( lst1, lst2, i = 0, j = 0, merged = []):
     if(len(lst1) == i) and (len(lst2) == j):
         return merged
     
-    if(len(lst1) == i):
+    elif(len(lst1) == i):
         merged.append(lst2[j])
         j += 1
-        return merge( lst1, lst2, i, j, merged)
-
-    if(len(lst2) == j):
+       
+    elif(len(lst2) == j):
         merged.append(lst1[i])
         i += 1
-        return merge( lst1, lst2, i, j, merged)
     
-    if( lst1[i] < lst2[j] ):
+    elif( lst1[i] < lst2[j] ):
         merged.append(lst1[i])
         i += 1
-        return merge(lst1, lst2,i, j, merged)
+       
     else:
         merged.append(lst2[j])
         j += 1
-        return merge(lst1, lst2, i, j, merged)
+        
+    return merge(lst1, lst2, i, j, merged)
 
 
 #-------------------------
