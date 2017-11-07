@@ -1,3 +1,5 @@
+# sudo apt-get install python3-matplotlib
+
 import matplotlib.pyplot as plt
 
 def square(x, y):
