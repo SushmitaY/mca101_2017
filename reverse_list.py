@@ -10,6 +10,5 @@ def reverse(lst):
     
     if lst == []:
         return rlst
-    else:
-        rlst.append(lst[-1])
-        return reverse(lst[0:len(lst) - 1])
+    rlst.append(lst[-1])
+    return reverse(lst[0:len(lst) - 1])
